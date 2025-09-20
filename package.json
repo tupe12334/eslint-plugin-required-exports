@@ -1,6 +1,6 @@
 {
   "name": "eslint-plugin-required-exports",
-  "version": "0.1.0",
+  "version": "0.2.0",
   "description": "ESLint plugin that enforces exports of declarations like const, type, interface, class, enum",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
