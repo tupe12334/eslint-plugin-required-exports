@@ -6,8 +6,7 @@
   },
   "npm": {
     "publish": true,
-    "token": "${NPM_TOKEN}",
-    "otp": "${NPM_OTP}"
+    "otp": "902120"
   },
   "github": {
     "release": false
