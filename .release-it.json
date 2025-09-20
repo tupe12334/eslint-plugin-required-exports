@@ -2,11 +2,12 @@
   "git": {
     "commitMessage": "chore: release v${version}",
     "tagName": "v${version}",
-    "requireBranch": "${RELEASE_BRANCH:-main}"
+    "requireBranch": "main"
   },
   "npm": {
     "publish": true,
-    "token": "${NPM_TOKEN}"
+    "token": "${NPM_TOKEN}",
+    "otp": "${NPM_OTP}"
   },
   "github": {
     "release": true,
