@@ -11,7 +11,8 @@
     "test:watch": "vitest --watch",
     "lint": "eslint src/**/*.ts",
     "prepare": "pnpm build",
-    "release": "release-it"
+    "release": "dotenv -e .env -- release-it",
+    "release:dry": "dotenv -e .env -- release-it --dry-run"
   },
   "keywords": [
     "eslint",
@@ -38,6 +39,7 @@
     "@typescript-eslint/rule-tester": "^8.44.0",
     "@typescript-eslint/utils": "^8.44.0",
     "@vitest/ui": "^3.2.4",
+    "dotenv-cli": "^10.0.0",
     "eslint": "^9.36.0",
     "release-it": "^19.0.5",
     "typescript": "^5.9.2",

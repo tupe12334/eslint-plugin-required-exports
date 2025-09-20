@@ -1,16 +1,29 @@
 {
   "git": {
     "commitMessage": "chore: release v${version}",
-    "tagName": "v${version}"
+    "tagName": "v${version}",
+    "requireBranch": "${RELEASE_BRANCH:-main}"
   },
   "npm": {
-    "publish": true
+    "publish": true,
+    "token": "${NPM_TOKEN}"
   },
   "github": {
     "release": true,
-    "releaseName": "v${version}"
+    "releaseName": "v${version}",
+    "token": "${GITHUB_TOKEN}"
   },
   "hooks": {
-    "before:init": ["pnpm test", "pnpm build"]
+    "before:init": [
+      "test -f .env && source .env || true",
+      "pnpm test",
+      "pnpm build"
+    ],
+    "after:bump": [
+      "echo 'Version bumped to ${version}'"
+    ],
+    "after:release": [
+      "echo 'Successfully released v${version}'"
+    ]
   }
 }
