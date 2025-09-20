@@ -10,9 +10,7 @@
     "otp": "${NPM_OTP}"
   },
   "github": {
-    "release": true,
-    "releaseName": "v${version}",
-    "token": "${GITHUB_TOKEN}"
+    "release": false
   },
   "hooks": {
     "before:init": [
