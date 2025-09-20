@@ -130,12 +130,17 @@ To create releases, you'll need to configure environment variables for secure to
 
 ### NPM 2FA and OTP
 
-If you have 2FA enabled on NPM (recommended), you'll need to provide an OTP (One-Time Password) during releases. You can either:
+If you have 2FA enabled on NPM (recommended), you'll need to provide an OTP (One-Time Password) during releases.
 
-1. Set it in your `.env` file: `NPM_OTP=123456`
-2. Pass it as an environment variable: `NPM_OTP=123456 pnpm release`
+**Important**: Do NOT store the OTP in your `.env` file as these codes expire quickly (usually within 30 seconds).
 
-The OTP codes expire quickly, so you may need to update them during the release process.
+Instead, pass it as an environment variable when running the release:
+
+```bash
+NPM_OTP=123456 pnpm release
+```
+
+If the OTP expires during the release process, you may need to get a new code and run the command again.
 
 ## Pull Request Guidelines
 
