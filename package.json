@@ -1,0 +1,48 @@
+{
+  "name": "eslint-plugin-required-exports",
+  "version": "0.1.0",
+  "description": "ESLint plugin that enforces exports of declarations like const, type, interface, class, enum",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "scripts": {
+    "build": "vite build",
+    "dev": "vite build --watch",
+    "test": "vitest",
+    "test:watch": "vitest --watch",
+    "lint": "eslint src/**/*.ts",
+    "prepare": "pnpm build",
+    "release": "release-it"
+  },
+  "keywords": [
+    "eslint",
+    "eslint-plugin",
+    "exports",
+    "typescript"
+  ],
+  "author": "",
+  "license": "MIT",
+  "packageManager": "pnpm@10.12.1",
+  "files": [
+    "dist"
+  ],
+  "engines": {
+    "node": ">=18"
+  },
+  "peerDependencies": {
+    "eslint": "^9.0.0"
+  },
+  "devDependencies": {
+    "@types/eslint": "^9.6.1",
+    "@types/node": "^24.5.2",
+    "@typescript-eslint/parser": "^8.44.0",
+    "@typescript-eslint/rule-tester": "^8.44.0",
+    "@typescript-eslint/utils": "^8.44.0",
+    "@vitest/ui": "^3.2.4",
+    "eslint": "^9.36.0",
+    "release-it": "^19.0.5",
+    "typescript": "^5.9.2",
+    "vite": "^7.1.6",
+    "vite-plugin-dts": "^4.5.4",
+    "vitest": "^3.2.4"
+  }
+}
