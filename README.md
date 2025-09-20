@@ -121,64 +121,9 @@ The rule accepts an options object with the following properties:
 
 This rule supports auto-fixing. It will automatically add the `export` keyword to declarations that are missing it.
 
-## Development
+## Contributing
 
-```bash
-# Install dependencies
-pnpm install
-
-# Build the project
-pnpm build
-
-# Run tests
-pnpm test
-
-# Run tests in watch mode
-pnpm test:watch
-
-# Create a release
-pnpm release
-```
-
-## Release Setup
-
-To create releases, you'll need to configure environment variables:
-
-1. Copy the example environment file:
-
-   ```bash
-   cp .env.example .env
-   ```
-
-2. Fill in your tokens in `.env`:
-
-   ```bash
-   # GitHub Personal Access Token for releases
-   GITHUB_TOKEN=ghp_your_token_here
-
-   # NPM Token for publishing
-   NPM_TOKEN=npm_your_token_here
-
-   # Git configuration
-   GIT_USER_NAME="Your Name"
-   GIT_USER_EMAIL="your.email@example.com"
-   ```
-
-3. Create tokens:
-   - **GitHub Token**: Go to [GitHub Settings > Tokens](https://github.com/settings/tokens)
-     - Required scopes: `repo` (for private repos) or `public_repo` (for public repos)
-   - **NPM Token**: Go to [NPM Settings > Tokens](https://www.npmjs.com/settings/tokens)
-     - Required scope: `Automation` or `Publish`
-
-4. Run release commands:
-
-   ```bash
-   # Dry run to test the release process
-   pnpm release:dry
-
-   # Create an actual release
-   pnpm release
-   ```
+Interested in contributing? Please see our [Contributing Guide](./CONTRIBUTING.md) for development setup, release process, and guidelines.
 
 ## License
 
