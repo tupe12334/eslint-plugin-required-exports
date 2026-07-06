@@ -87,7 +87,7 @@ export const requiredExportsRule = createRule<Options, MessageIds>({
 
     function collectExportedNames(node: TSESTree.Node): void {
       switch (node.type) {
-        case 'ExportNamedDeclaration':
+        case 'ExportNamedDeclaration': {
           if (node.declaration) {
             if (node.declaration.type === 'VariableDeclaration') {
               for (const declarator of node.declaration.declarations) {
@@ -110,7 +110,9 @@ export const requiredExportsRule = createRule<Options, MessageIds>({
             }
           }
           break;
-        case 'ExportDefaultDeclaration':
+        }
+
+        case 'ExportDefaultDeclaration': {
           if (
             node.declaration.type !== 'Identifier' &&
             'id' in node.declaration &&
@@ -119,6 +121,7 @@ export const requiredExportsRule = createRule<Options, MessageIds>({
             exportedNames.add(node.declaration.id.name);
           }
           break;
+        }
       }
     }
 
