@@ -125,6 +125,10 @@ This rule supports auto-fixing. It will automatically add the `export` keyword t
 
 Interested in contributing? Please see our [Contributing Guide](./CONTRIBUTING.md) for development setup, release process, and guidelines.
 
+## Related projects
+
+- [moadim](https://moadim.io/) — loop engineering: build, schedule & run agent loops.
+
 ## License
 
 MIT
